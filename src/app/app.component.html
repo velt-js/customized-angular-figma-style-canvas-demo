@@ -1,0 +1,11 @@
+<main [class.isFocused]="isFocused">
+	<app-sidebar shadow-dom="false" *ngIf="!isFocused"></app-sidebar>
+
+	<div class="content">
+		<app-toolbar *ngIf="!isFocused"></app-toolbar>
+		<app-document></app-document>
+		<app-wireframe></app-wireframe>
+	</div>
+</main>
+
+<router-outlet />
