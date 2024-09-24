@@ -133,15 +133,15 @@
 				</div>
 				<div class="message">
 					<velt-comment-dialog-thread-card-message-wireframe></velt-comment-dialog-thread-card-message-wireframe>
-					<velt-if condition="comment.reactionAnnotationIds.length == 0">
-						<velt-comment-dialog-thread-card-reaction-tool-wireframe></velt-comment-dialog-thread-card-reaction-tool-wireframe>
-					</velt-if>
+					<div class="reaction-tool">
 
+						<velt-comment-dialog-thread-card-reaction-tool-wireframe></velt-comment-dialog-thread-card-reaction-tool-wireframe>
+					</div>
 				</div>
 			</div>
 			<velt-comment-dialog-thread-card-options-wireframe></velt-comment-dialog-thread-card-options-wireframe>
 		</div>
-		<velt-if condition="comment.reactionAnnotationIds.length > 0">
+		<velt-if condition="{comment.reactionAnnotationIds[0].length} > 0">
 			<velt-comment-dialog-thread-card-reactions-wireframe></velt-comment-dialog-thread-card-reactions-wireframe>
 		</velt-if>
 

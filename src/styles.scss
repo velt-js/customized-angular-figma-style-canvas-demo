@@ -288,11 +288,16 @@ app-comment-dialog-toggle-reply {
 
 .user-info {
 	display: flex;
-}
 
+}
+.info {
+	.velt-thread-card--name {
+			font-size: 14px !important;
+	}
+}
 .velt-thread-card--message {
 	padding: 0 !important;
-	margin: 0 !important;
+	margin-top: 0.75rem;
 }
 
 .user {
@@ -314,12 +319,13 @@ app-comment-dialog-toggle-reply {
 				width: 100%;
 			}
 
-			app-comment-dialog-thread-card-reaction-tool {
+			.reaction-tool {
 				opacity: 0;
+
 
 			}
 
-			&:hover>app-comment-dialog-thread-card-reaction-tool {
+			&:hover>.reaction-tool {
 				opacity: 1;
 			}
 		}
@@ -332,4 +338,10 @@ app-comment-dialog-toggle-reply {
 
 app-comment-dialog-threads {
 	gap: 0 !important;
+}
+
+.velt-thread-card--container[velt-reactions] {
+	.reaction-tool {
+		display: none;
+	}
 }
