@@ -162,6 +162,7 @@ velt-notifications-tool {
 		}
 	}
 
+	/**
 	velt-comment-dialog-header-wireframe {
 		.header-container {
 			width: 100%;
@@ -199,9 +200,22 @@ velt-notifications-tool {
 			}
 		}
 	}
+	**/
+
+	.header-actions {
+		display: inline-flex;
+		gap: 8px;
+		position: absolute;
+		z-index: 3;
+		right: 1rem;
+		top: 1rem;
+		padding: 0.5rem;
+		background-color: light-dark(#FFFFFF, #0F0F0F) !important;
+	}
+
 
 	.velt-thread-card--container {
-		padding: 1rem !important;
+		padding: 1.5rem !important;
 	}
 
 
@@ -241,7 +255,7 @@ velt-comment-dialog-toggle-reply-wireframe {
 .velt-composer--submit-button {
 	padding: 0.5rem !important;
 	border-radius: 1.5rem !important;
-	
+
 	&:disabled {
 		background-color: light-dark(var(--light-bg-1), var(--dark-bg-1)) !important;
 	}
@@ -265,12 +279,57 @@ velt-comment-dialog-toggle-reply-wireframe {
 		display: flex;
 	}
 }
-app-comment-dialog-toggle-reply{
-	div.ng-star-inserted{
+
+app-comment-dialog-toggle-reply {
+	div.ng-star-inserted {
 		padding-bottom: 1rem;
 	}
 }
 
-.user-info{
+.user-info {
 	display: flex;
+}
+
+.velt-thread-card--message {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.user {
+	display: flex;
+	gap: 1rem;
+
+	.right {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		width: 100%;
+
+		.message {
+			display: flex;
+			gap: 0.5rem;
+			width: 100%;
+
+			app-comment-dialog-thread-card-message {
+				width: 100%;
+			}
+
+			app-comment-dialog-thread-card-reaction-tool {
+				opacity: 0;
+
+			}
+
+			&:hover>app-comment-dialog-thread-card-reaction-tool {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.velt-thread-card--reactions {
+	align-items: center !important;
+}
+
+app-comment-dialog-threads {
+	gap: 0 !important;
 }
